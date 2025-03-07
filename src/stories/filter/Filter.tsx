@@ -6,7 +6,7 @@ import { Typographies } from "../../constants/typography";
 import { Check } from "lucide-react";
 import { ChipProps, FilterProps } from "./Filter.type";
 
-export const Filter = ({ children }: FilterProps) => {
+export function Filter({ children }: FilterProps) {
   const filterChips = Children.toArray(children);
 
   return (
@@ -23,7 +23,7 @@ export const Filter = ({ children }: FilterProps) => {
       ))}
     </ul>
   );
-};
+}
 
 const Chip = ({
   label,
@@ -50,21 +50,21 @@ const Chip = ({
   );
 };
 
-export const RoundFillChip = (props: Omit<ChipProps, "variant" | "shape">) => (
-  <Chip {...props} variant="fill" shape="round" />
-);
+export function RoundFillChip(props: Omit<ChipProps, "variant" | "shape">) {
+  return <Chip {...props} variant="fill" shape="round" />;
+}
 
-export const RoundStrokeChip = (
-  props: Omit<ChipProps, "variant" | "shape">
-) => <Chip {...props} variant="stroke" shape="round" />;
+export function RoundStrokeChip(props: Omit<ChipProps, "variant" | "shape">) {
+  return <Chip {...props} variant="stroke" shape="round" />;
+}
 
-export const SquareFillChip = (props: Omit<ChipProps, "variant" | "shape">) => (
-  <Chip {...props} variant="fill" shape="square" />
-);
+export function SquareFillChip(props: Omit<ChipProps, "variant" | "shape">) {
+  return <Chip {...props} variant="fill" shape="square" />;
+}
 
-export const SquareStrokeChip = (
-  props: Omit<ChipProps, "variant" | "shape">
-) => <Chip {...props} variant="stroke" shape="square" />;
+export function SquareStrokeChip(props: Omit<ChipProps, "variant" | "shape">) {
+  return <Chip {...props} variant="stroke" shape="square" />;
+}
 
 ///////////////////////////////////////////////////////////////
 

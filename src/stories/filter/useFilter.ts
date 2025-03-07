@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-export const useFilter = () => {
-  const [selectedItems, setSelected] = useState<string[]>([]);
+export function useFilter() {
+  const [selectedItems, setSelectedItems] = useState<string[]>([]);
 
   const onFilter = (item: string) => {
-    setSelected((prevSelected) => {
+    setSelectedItems((prevSelected) => {
       if (prevSelected.includes(item)) {
         return prevSelected.filter((i) => i !== item);
       } else {
@@ -17,5 +17,5 @@ export const useFilter = () => {
     return selectedItems.includes(item);
   };
 
-  return { isSelected, onFilter };
-};
+  return { selectedItems, isSelected, onFilter };
+}
