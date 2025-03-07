@@ -1,10 +1,14 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import { Children, Fragment } from "react";
+import { Children, Fragment, ReactNode } from "react";
 import { Colors } from "../../constants/colors";
 import { Typographies } from "../../constants/typography";
 import { Check } from "lucide-react";
-import { ChipProps, FilterProps } from "./Filter.type";
+import { Size } from "../../types/size";
+
+export type FilterProps = {
+  children: ReactNode;
+};
 
 export function Filter({ children }: FilterProps) {
   const filterChips = Children.toArray(children);
@@ -24,6 +28,15 @@ export function Filter({ children }: FilterProps) {
     </ul>
   );
 }
+
+export type ChipProps = {
+  label: string;
+  size?: Size;
+  selected: boolean;
+  onClick: () => void;
+  variant: "fill" | "stroke";
+  shape: "round" | "square";
+};
 
 const Chip = ({
   label,

@@ -2,7 +2,16 @@
 import { css, SerializedStyles } from "@emotion/react";
 import { Colors } from "../../constants/colors";
 import { Typographies } from "../../constants/typography";
-import { ButtonProps } from "./Button.type";
+import { ButtonHTMLAttributes } from "react";
+import { Size } from "../../types/size";
+
+export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+  label: string;
+  size?: Size;
+  disabled?: boolean;
+  startIcon?: React.ReactNode;
+  endIcon?: React.ReactNode;
+};
 
 function Button({
   label,

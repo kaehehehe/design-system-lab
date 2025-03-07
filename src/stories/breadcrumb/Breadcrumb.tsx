@@ -1,8 +1,11 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import { Children, isValidElement, PropsWithChildren } from "react";
+import { Children, isValidElement, PropsWithChildren, ReactNode } from "react";
 import { Typographies } from "../../constants/typography";
-import { BreadcrumbProps } from "./Breadcrumb.type";
+
+export type BreadcrumbProps = {
+  separator: ReactNode;
+};
 
 export function Breadcrumb({
   children,
