@@ -21,7 +21,7 @@ export function AlertDialog({
 }: AlertDialogProps) {
   return (
     <Flexbox flexDirection="column" gap={10}>
-      <Dialog open={open} customStyle={ConfirmDialogStyle.container}>
+      <Dialog open={open} size="XS">
         <Dialog.DialogHeader>
           <Dialog.DialogTitle title={title} />
           <Dialog.DialogCloseButton onClose={onClose} />
@@ -45,11 +45,6 @@ export function AlertDialog({
 }
 
 const ConfirmDialogStyle = {
-  container: css`
-    width: 526px;
-    height: 190px;
-  `,
-
   content: css`
     padding: 8px 12px;
   `,

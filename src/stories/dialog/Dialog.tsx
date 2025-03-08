@@ -9,19 +9,29 @@ import { DialogBody } from "./DialogBody";
 import { DialogCloseButton } from "./DialogCloseButton";
 import { DialogTitle } from "./DialogTitle";
 
+export type DialogSizeType = "XS" | "S" | "M" | "L";
+
 type DialogProps = {
   children: ReactNode;
   open: boolean;
   customStyle?: SerializedStyles;
+  size?: DialogSizeType;
 };
 
-export function Dialog({ open, children, customStyle }: DialogProps) {
+export function Dialog({
+  open,
+  children,
+  customStyle,
+  size = "S",
+}: DialogProps) {
   if (!open) return null;
 
   return createPortal(
     <>
       <div css={DialogOverlayStyle} />
-      <div css={[DialogStyle, customStyle]}>{children}</div>
+      <div css={[DialogStyle, DialogSizeStyle[size], customStyle]}>
+        {children}
+      </div>
     </>,
     document.body
   );
@@ -54,3 +64,21 @@ const DialogStyle = css`
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 `;
+
+const DialogSizeStyle = {
+  XS: css`
+    width: 526px;
+  `,
+
+  S: css`
+    width: 773px;
+  `,
+
+  M: css`
+    width: 834px;
+  `,
+
+  L: css`
+    width: 1038px;
+  `,
+};
