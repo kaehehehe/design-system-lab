@@ -18,8 +18,8 @@ export function BasicInput({
   labelText,
   helperText,
   value,
-  onChange,
   onClear,
+  ...props
 }: BasicInputProps) {
   const [isFocused, setIsFocused] = useState(false);
 
@@ -29,9 +29,10 @@ export function BasicInput({
       <InputArea onClear={onClear} isFocused={isFocused}>
         <Input
           value={value}
-          onChange={onChange}
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(false)}
+          type="text"
+          {...props}
         />
       </InputArea>
       {helperText && <HelperText helperText={helperText} />}
