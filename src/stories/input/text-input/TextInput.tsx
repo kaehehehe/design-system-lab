@@ -6,7 +6,7 @@ import { HelperText } from "../shared/HelperText";
 import { ChangeEvent, useState } from "react";
 import { Input } from "../shared/Input";
 
-type BasicInputProps = {
+type TextInputProps = {
   labelText?: string;
   helperText?: string;
   value: string;
@@ -14,13 +14,13 @@ type BasicInputProps = {
   onClear: () => void;
 };
 
-export function BasicInput({
+export function TextInput({
   labelText,
   helperText,
   value,
   onClear,
   ...props
-}: BasicInputProps) {
+}: TextInputProps) {
   const [isFocused, setIsFocused] = useState(false);
 
   return (
