@@ -6,6 +6,8 @@ import { Colors } from "../../constants/colors";
 import { DialogHeader } from "./DialogHeader";
 import { DialogFooter } from "./DialogFooter";
 import { DialogBody } from "./DialogBody";
+import { DialogCloseButton } from "./DialogCloseButton";
+import { DialogTitle } from "./DialogTitle";
 
 type DialogProps = {
   children: ReactNode;
@@ -28,6 +30,8 @@ export function Dialog({ open, children, customStyle }: DialogProps) {
 Dialog.DialogHeader = DialogHeader;
 Dialog.DialogBody = DialogBody;
 Dialog.DialogFooter = DialogFooter;
+Dialog.DialogCloseButton = DialogCloseButton;
+Dialog.DialogTitle = DialogTitle;
 
 const DialogOverlayStyle = css`
   z-index: 1000;

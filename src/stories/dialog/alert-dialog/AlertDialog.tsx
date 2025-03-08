@@ -2,9 +2,7 @@
 import { css } from "@emotion/react";
 import { Dialog } from "../Dialog";
 import { Flexbox } from "../../../components/layouts/Flexbox";
-import { X } from "lucide-react";
 import { PrimaryButton, SecondaryButton, WarningButton } from "../../button";
-import { Typographies } from "../../../constants/typography";
 
 type AlertDialogProps = {
   open: boolean;
@@ -25,8 +23,8 @@ export function AlertDialog({
     <Flexbox flexDirection="column" gap={10}>
       <Dialog open={open} customStyle={ConfirmDialogStyle.container}>
         <Dialog.DialogHeader>
-          <h1 css={ConfirmDialogStyle.title}>{title}</h1>
-          <X onClick={onClose} css={ConfirmDialogStyle.closeIcon} size={20} />
+          <Dialog.DialogTitle title={title} />
+          <Dialog.DialogCloseButton onClose={onClose} />
         </Dialog.DialogHeader>
 
         <Dialog.DialogBody>
@@ -50,13 +48,6 @@ const ConfirmDialogStyle = {
   container: css`
     width: 526px;
     height: 190px;
-  `,
-  title: css`
-    ${Typographies.title.SB}
-  `,
-
-  closeIcon: css`
-    cursor: pointer;
   `,
 
   content: css`
