@@ -2,15 +2,16 @@
 import { css, SerializedStyles } from "@emotion/react";
 import { Colors } from "../../constants/colors";
 import { Typographies } from "../../constants/typography";
-import { ButtonHTMLAttributes } from "react";
+import { ButtonHTMLAttributes, ReactElement } from "react";
 import { Size } from "../../types/size";
 
 export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   label: string;
   size?: Size;
   disabled?: boolean;
-  startIcon?: React.ReactNode;
-  endIcon?: React.ReactNode;
+  startIcon?: ReactElement;
+  endIcon?: ReactElement;
+  customStyle?: SerializedStyles;
 };
 
 function Button({
@@ -21,7 +22,7 @@ function Button({
   endIcon,
   customStyle,
   ...props
-}: ButtonProps & { customStyle?: SerializedStyles }) {
+}: ButtonProps) {
   return (
     <button
       disabled={disabled}
