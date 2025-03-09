@@ -2,15 +2,13 @@
 import { css } from "@emotion/react";
 import { Colors } from "../../../constants/colors";
 import { ReactNode, useState } from "react";
-import { X } from "lucide-react";
 
 type InputAreaProps = {
   children: ReactNode;
-  onClear: () => void;
   isFocused: boolean;
 };
 
-export function InputArea({ children, onClear, isFocused }: InputAreaProps) {
+export function InputArea({ children, isFocused }: InputAreaProps) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -20,7 +18,6 @@ export function InputArea({ children, onClear, isFocused }: InputAreaProps) {
       onMouseLeave={() => setIsHovered(false)}
     >
       {children}
-      <X onClick={onClear} size={16} css={ClearIconStyle} />
     </div>
   );
 }
@@ -37,8 +34,4 @@ const InputAreaStyle = (isFocused: boolean, isHovered: boolean) => css`
       : isHovered
       ? Colors.secondary[100]
       : Colors.light[200]};
-`;
-
-const ClearIconStyle = css`
-  cursor: pointer;
 `;
