@@ -1,10 +1,16 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { Colors } from "../../../constants/colors";
-import { ReactNode, useState } from "react";
+import { ReactElement, useState } from "react";
+import { Input } from "./Input";
+import { ClearIcon } from "./ClearIcon";
 
 type InputAreaProps = {
-  children: ReactNode;
+  children: (
+    | ReactElement<typeof Input>
+    | ReactElement<typeof ClearIcon>
+    | ReactElement
+  )[];
   isFocused: boolean;
 };
 

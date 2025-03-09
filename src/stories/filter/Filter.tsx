@@ -1,13 +1,13 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import { Children, Fragment, ReactNode } from "react";
+import { Children, Fragment, ReactElement } from "react";
 import { Colors } from "../../constants/colors";
 import { Typographies } from "../../constants/typography";
 import { Check } from "lucide-react";
 import { Size } from "../../types/size";
 
 export type FilterProps = {
-  children: ReactNode;
+  children: ReactElement<typeof Chip>[];
 };
 
 export function Filter({ children }: FilterProps) {

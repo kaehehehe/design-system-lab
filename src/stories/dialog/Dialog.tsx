@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css, SerializedStyles } from "@emotion/react";
-import { ReactNode } from "react";
+import { ReactElement } from "react";
 import { createPortal } from "react-dom";
 import { Colors } from "../../constants/colors";
 import { DialogHeader } from "./DialogHeader";
@@ -12,7 +12,11 @@ import { DialogTitle } from "./DialogTitle";
 export type DialogSizeType = "XS" | "S" | "M" | "L";
 
 type DialogProps = {
-  children: ReactNode;
+  children: (
+    | ReactElement<typeof DialogHeader>
+    | ReactElement<typeof DialogBody>
+    | ReactElement<typeof DialogFooter>
+  )[];
   open: boolean;
   customStyle?: SerializedStyles;
   size?: DialogSizeType;
