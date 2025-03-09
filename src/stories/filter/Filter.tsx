@@ -14,20 +14,20 @@ export function Filter({ children }: FilterProps) {
   const filterChips = Children.toArray(children);
 
   return (
-    <ul
-      css={css`
-        display: flex;
-        gap: 12px;
-        flex-wrap: wrap;
-        width: 100%;
-      `}
-    >
+    <div css={FilterStyle}>
       {filterChips.map((chip, index) => (
         <Fragment key={index}>{chip}</Fragment>
       ))}
-    </ul>
+    </div>
   );
 }
+
+const FilterStyle = css`
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  width: 100%;
+`;
 
 export type ChipProps = {
   label: string;
