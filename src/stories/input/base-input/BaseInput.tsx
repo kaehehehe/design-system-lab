@@ -26,6 +26,7 @@ export type BaseInputProps = {
   prefixIcon?: ReactElement;
   suffixIcon?: ReactElement;
   type?: InputType;
+  placeholder: string;
 };
 
 export function BaseInput({
@@ -36,6 +37,7 @@ export function BaseInput({
   prefixIcon,
   suffixIcon,
   type = "text",
+  placeholder,
   ...props
 }: BaseInputProps) {
   const [isFocused, setIsFocused] = useState(false);
@@ -51,6 +53,7 @@ export function BaseInput({
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(false)}
           type={type}
+          placeholder={placeholder}
           {...props}
         />
 

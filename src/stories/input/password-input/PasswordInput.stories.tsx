@@ -20,6 +20,7 @@ export const Playground: Story = (args: any) => {
 
   return (
     <PasswordInput
+      placeholder="Enter Password"
       value={inputText}
       setValue={setInputText}
       onChange={onChange}

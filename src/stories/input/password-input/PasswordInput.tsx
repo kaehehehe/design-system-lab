@@ -4,11 +4,16 @@ import { Eye, EyeOff } from "lucide-react";
 
 type PasswordInputProps = BaseInputProps & {};
 
-export function PasswordInput({ type, ...props }: PasswordInputProps) {
+export function PasswordInput({
+  type,
+  placeholder,
+  ...props
+}: PasswordInputProps) {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
     <BaseInput
+      placeholder={placeholder}
       type={showPassword ? "text" : "password"}
       suffixIcon={
         showPassword ? (
