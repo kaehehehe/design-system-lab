@@ -3,6 +3,7 @@ import { css } from "@emotion/react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { Filter } from "./Filter";
 import { useFilter } from "./useFilter";
+import { Flexbox } from "../../components/layouts/Flexbox";
 
 const meta = {
   title: "Components/Filter",
@@ -19,13 +20,7 @@ export const Playground: Story = (args: any) => {
   const { isSelected, onFilter } = useFilter();
 
   return (
-    <div
-      css={css`
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-      `}
-    >
+    <Flexbox flexDirection="column" gap={20}>
       <Filter>
         {items.map((item, index) => (
           <Filter.RoundFillChip
@@ -69,7 +64,7 @@ export const Playground: Story = (args: any) => {
           />
         ))}
       </Filter>
-    </div>
+    </Flexbox>
   );
 };
 
