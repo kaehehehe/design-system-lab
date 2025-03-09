@@ -10,6 +10,7 @@ type InputAreaProps = {
     | ReactElement<typeof Input>
     | ReactElement<typeof ClearIcon>
     | ReactElement
+    | null
   )[];
   isFocused: boolean;
 };

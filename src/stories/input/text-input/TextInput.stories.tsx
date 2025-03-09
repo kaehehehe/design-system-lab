@@ -18,11 +18,9 @@ export const Playground: Story = (args: any) => {
     setInputText(event.target.value);
   };
 
-  const onClear = () => {
-    setInputText("");
-  };
-
-  return <TextInput value={inputText} onChange={onChange} onClear={onClear} />;
+  return (
+    <TextInput value={inputText} setValue={setInputText} onChange={onChange} />
+  );
 };
 
 Playground.args = {};

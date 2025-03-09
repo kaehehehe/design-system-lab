@@ -1,24 +1,38 @@
-/** @jsxImportSource @emotion/react */
 import { InputContainer } from "../shared/InputContainer";
 import { LabelText } from "../shared/LabelText";
 import { InputArea } from "../shared/InputArea";
 import { HelperText } from "../shared/HelperText";
-import { ChangeEvent, useState } from "react";
+import {
+  ChangeEvent,
+  Dispatch,
+  ReactElement,
+  SetStateAction,
+  useState,
+} from "react";
 import { Input } from "../shared/Input";
+import { ClearIcon } from "../shared/ClearIcon";
+
+type InputType = "text" | "password" | "number";
 
 type TextInputProps = {
   labelText?: string;
   helperText?: string;
   value: string;
+  setValue: Dispatch<SetStateAction<string>>;
   onChange: (event: ChangeEvent<HTMLInputElement>) => void;
-  onClear: () => void;
+  prefixIcon?: ReactElement;
+  suffixIcon?: ReactElement;
+  type?: InputType;
 };
 
 export function TextInput({
   labelText,
   helperText,
   value,
-  onClear,
+  setValue,
+  prefixIcon,
+  suffixIcon,
+  type = "text",
   ...props
 }: TextInputProps) {
   const [isFocused, setIsFocused] = useState(false);
@@ -26,14 +40,17 @@ export function TextInput({
   return (
     <InputContainer>
       {labelText && <LabelText labelText={labelText} />}
-      <InputArea onClear={onClear} isFocused={isFocused}>
+      <InputArea isFocused={isFocused}>
+        {prefixIcon ? prefixIcon : null}
         <Input
           value={value}
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(false)}
-          type="text"
+          type={type}
           {...props}
         />
+        <ClearIcon setValue={setValue} />
+        {suffixIcon ? suffixIcon : null}
       </InputArea>
       {helperText && <HelperText helperText={helperText} />}
     </InputContainer>
