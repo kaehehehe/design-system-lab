@@ -65,10 +65,10 @@ export function LoadingSpinner({
 }
 
 const LoadingSpinnerSize = (size: number) => {
-  return css`
-    width: ${size}px;
-    height: ${size}px;
-  `;
+  return css({
+    width: `${size}px`,
+    height: `${size}px`,
+  });
 };
 
 const fadeIn = keyframes`

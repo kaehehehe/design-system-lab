@@ -9,9 +9,9 @@ export function Input({ ...props }: InputProps) {
   return <input {...props} css={InputStyle} />;
 }
 
-const InputStyle = css`
-  border: none;
-  outline: none;
-  width: 100%;
-  background-color: ${Colors.basic.white};
-`;
+const InputStyle = css({
+  border: "none",
+  outline: "none",
+  width: "100%",
+  backgroundColor: Colors.basic.white,
+});

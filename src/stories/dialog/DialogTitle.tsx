@@ -10,6 +10,6 @@ export function DialogTitle({ title }: DialogTitleProps) {
   return <h1 css={DialogTitleStyle}>{title}</h1>;
 }
 
-const DialogTitleStyle = css`
-  ${Typographies.title.SB}
-`;
+const DialogTitleStyle = css({
+  ...Typographies.title.SB,
+});

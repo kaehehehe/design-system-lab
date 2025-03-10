@@ -2,102 +2,102 @@ import { css } from "@emotion/react";
 
 export const Typographies = {
   topHeadline: {
-    B: css`
-      font-size: 26px;
-      line-height: 32px;
-      font-weight: 700;
-    `,
-    SB: css`
-      font-size: 26px;
-      line-height: 32px;
-      font-weight: 600;
-    `,
+    B: {
+      fontSize: "26px",
+      lineHeight: "32px",
+      fontWeight: 700,
+    },
+    SB: {
+      fontSize: "26px",
+      lineHeight: "32px",
+      fontWeight: 600,
+    },
   },
   headline: {
-    B: css`
-      font-size: 24px;
-      line-height: 28px;
-      font-weight: 700;
-    `,
-    SB: css`
-      font-size: 24px;
-      line-height: 28px;
-      font-weight: 600;
-    `,
+    B: {
+      fontSize: "24px",
+      lineHeight: "28px",
+      fontWeight: 700,
+    },
+    SB: {
+      fontSize: "24px",
+      lineHeight: "28px",
+      fontWeight: 600,
+    },
   },
   subHead: {
-    B: css`
-      font-size: 20px;
-      line-height: 26px;
-      font-weight: 700;
-    `,
-    SB: css`
-      font-size: 20px;
-      line-height: 26px;
-      font-weight: 600;
-    `,
+    B: {
+      fontSize: "20px",
+      lineHeight: "26px",
+      fontWeight: 700,
+    },
+    SB: {
+      fontSize: "20px",
+      lineHeight: "26px",
+      fontWeight: 600,
+    },
   },
   title: {
-    B: css`
-      font-size: 18px;
-      line-height: 24px;
-      font-weight: 700;
-    `,
-    SB: css`
-      font-size: 18px;
-      line-height: 24px;
-      font-weight: 600;
-    `,
+    B: {
+      fontSize: "18px",
+      lineHeight: "24px",
+      fontWeight: 700,
+    },
+    SB: {
+      fontSize: "18px",
+      lineHeight: "24px",
+      fontWeight: 600,
+    },
   },
   semiTitle: {
-    B: css`
-      font-size: 16px;
-      line-height: 22px;
-      font-weight: 700;
-    `,
-    SB: css`
-      font-size: 16px;
-      line-height: 22px;
-      font-weight: 600;
-    `,
+    B: css({
+      fontSize: "16px",
+      lineHeight: "22px",
+      fontWeight: 700,
+    }),
+    SB: css({
+      fontSize: "16px",
+      lineHeight: "22px",
+      fontWeight: 600,
+    }),
   },
   body: {
-    B: css`
-      font-size: 14px;
-      line-height: 18px;
-      font-weight: 700;
-    `,
-    SB: css`
-      font-size: 14px;
-      line-height: 18px;
-      font-weight: 600;
-    `,
-    R: css`
-      font-size: 14px;
-      line-height: 16px;
-      font-weight: 400;
-    `,
+    B: css({
+      fontSize: "14px",
+      lineHeight: "18px",
+      fontWeight: 700,
+    }),
+    SB: {
+      fontSize: "14px",
+      lineHeight: "18px",
+      fontWeight: 600,
+    },
+    R: {
+      fontSize: "14px",
+      lineHeight: "16px",
+      fontWeight: 400,
+    },
   },
   caption: {
-    B: css`
-      font-size: 12px;
-      line-height: 16px;
-      font-weight: 700;
-    `,
-    SB: css`
-      font-size: 12px;
-      line-height: 16px;
-      font-weight: 600;
-    `,
-    R: css`
-      font-size: 12px;
-      line-height: 16px;
-      font-weight: 400;
-    `,
+    B: {
+      fontSize: "12px",
+      lineHeight: "16px",
+      fontWeight: 700,
+    },
+    SB: {
+      fontSize: "12px",
+      lineHeight: "16px",
+      fontWeight: 600,
+    },
+    R: {
+      fontSize: "12px",
+      lineHeight: "16px",
+      fontWeight: 400,
+    },
   },
-  subCaption: css`
-    font-size: 10px;
-    line-height: 14px;
-    font-weight: 400;
-  `,
+  subCaption: {
+    fontSize: "10px",
+    lineHeight: "14px",
+    fontWeight: 400,
+  },
 } as const;

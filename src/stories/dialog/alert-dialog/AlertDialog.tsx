@@ -45,11 +45,11 @@ export function AlertDialog({
 }
 
 const ConfirmDialogStyle = {
-  content: css`
-    padding: 8px 12px;
-  `,
+  content: css({
+    padding: "8px 12px",
+  }),
 
-  footer: css`
-    justify-content: flex-end;
-  `,
+  footer: css({
+    justifyContent: "flex-end",
+  }),
 };

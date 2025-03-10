@@ -12,10 +12,10 @@ export function DialogHeader({ customStyle, children }: DialogHeaderProps) {
   return <header css={[DialogHeaderStyle, customStyle]}>{children}</header>;
 }
 
-const DialogHeaderStyle = css`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 16px 24px;
-  border-bottom: 1px solid ${Colors.light[200]};
-`;
+const DialogHeaderStyle = css({
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+  padding: "16px 24px",
+  borderBottom: `1px solid ${Colors.light[200]}`,
+});

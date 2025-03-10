@@ -10,7 +10,7 @@ export function InputContainer({ children }: InputContainerProps) {
   return <div css={InputContainerStyle}>{children}</div>;
 }
 
-const InputContainerStyle = css`
-  display: flex;
-  flex-direction: column;
-`;
+const InputContainerStyle = css({
+  display: "flex",
+  flexDirection: "column",
+});

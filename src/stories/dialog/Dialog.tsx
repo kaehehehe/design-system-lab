@@ -47,42 +47,44 @@ Dialog.DialogFooter = DialogFooter;
 Dialog.DialogCloseButton = DialogCloseButton;
 Dialog.DialogTitle = DialogTitle;
 
-const DialogOverlayStyle = css`
-  z-index: 1000;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
-`;
+const DialogOverlayStyle = css({
+  zIndex: 1000,
+  position: "fixed",
+  top: 0,
+  left: 0,
+  width: "100vw",
+  height: "100vh",
+  backgroundColor: "rgba(0, 0, 0, 0.5)",
+});
 
-const DialogStyle = css`
-  z-index: 1001;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  border-radius: 10px;
-  transform: translate(-50%, -50%);
-  background-color: ${Colors.basic.white};
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
-    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
-`;
+const DialogStyle = css({
+  zIndex: 1001,
+  position: "fixed",
+  top: "50%",
+  left: "50%",
+  borderRadius: "10px",
+  transform: "translate(-50%, -50%)",
+  backgroundColor: Colors.basic.white,
+  boxShadow: `
+    rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px
+  `,
+});
 
 const DialogSizeStyle = {
-  XS: css`
-    width: 526px;
-  `,
+  XS: css({
+    width: "526px",
+  }),
 
-  S: css`
-    width: 773px;
-  `,
+  S: css({
+    width: "773px",
+  }),
 
-  M: css`
-    width: 834px;
-  `,
+  M: css({
+    width: "834px",
+  }),
 
-  L: css`
-    width: 1038px;
-  `,
+  L: css({
+    width: "1038px",
+  }),
 };

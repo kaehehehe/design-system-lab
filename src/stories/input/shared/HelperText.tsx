@@ -11,8 +11,8 @@ export function HelperText({ helperText }: HelperTextProps) {
   return <div css={HelperTextStyle}>{helperText}</div>;
 }
 
-const HelperTextStyle = css`
-  ${Typographies.caption.R}
-  color: ${Colors.neutral[100]};
-  margin-top: 2px;
-`;
+const HelperTextStyle = css({
+  ...Typographies.caption.R,
+  color: Colors.neutral[100],
+  marginTop: "2px",
+});

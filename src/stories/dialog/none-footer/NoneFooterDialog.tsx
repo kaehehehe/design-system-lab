@@ -33,12 +33,12 @@ export function NoneFooterDialog({
 }
 
 const NoneFooterDialogStyle = {
-  container: css`
-    width: 744px;
-  `,
+  container: css({
+    width: "744px",
+  }),
 
-  content: css`
-    height: 72px;
-    padding: 16px 24px;
-  `,
+  content: css({
+    height: "72px",
+    padding: "16px 24px",
+  }),
 };

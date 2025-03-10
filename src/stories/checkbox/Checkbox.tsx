@@ -25,12 +25,7 @@ export function Checkbox({
     <InteractiveArea>
       {(isHovered, isActive) => {
         return (
-          <span
-            css={css`
-              display: flex;
-              margin: 0 auto;
-            `}
-          >
+          <span css={CheckboxStyle.container}>
             <input
               type="checkbox"
               id={`checkbox${id}`}
@@ -86,15 +81,21 @@ export function Checkbox({
 }
 
 const CheckboxStyle = {
-  input: css`
-    display: none;
-  `,
+  container: css({
+    display: "flex",
+    margin: "0 auto",
+  }),
 
-  label: (disabled: boolean) => css`
-    position: relative;
-    display: flex;
-    align-items: center;
-    user-select: none;
-    cursor: ${disabled ? "not-allowed" : "pointer"};
-  `,
+  input: css({
+    display: "none",
+  }),
+
+  label: (disabled: boolean) =>
+    css({
+      position: "relative",
+      display: "flex",
+      alignItems: "center",
+      userSelect: "none",
+      cursor: disabled ? "not-allowed" : "pointer",
+    }),
 };

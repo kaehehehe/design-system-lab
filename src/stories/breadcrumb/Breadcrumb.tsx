@@ -27,17 +27,17 @@ export function Breadcrumb({
 }
 
 const BreadcrumbStyle = {
-  container: css`
-    display: flex;
-    gap: 8px;
-  `,
+  container: css({
+    display: "flex",
+    gap: "8px",
+  }),
 
-  text: css`
-    ${Typographies.caption.SB}
-  `,
+  text: css({
+    ...Typographies.caption.SB,
+  }),
 
-  breadcrumbItem: css`
-    display: flex;
-    gap: 8px;
-  `,
+  breadcrumbItem: css({
+    display: "flex",
+    gap: "8px",
+  }),
 };

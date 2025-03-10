@@ -20,7 +20,7 @@ export function InputArea({ children, isFocused }: InputAreaProps) {
 
   return (
     <div
-      css={InputAreaStyle(isFocused, isHovered)}
+      css={InputAreaStyle({ isFocused, isHovered })}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -29,16 +29,24 @@ export function InputArea({ children, isFocused }: InputAreaProps) {
   );
 }
 
-const InputAreaStyle = (isFocused: boolean, isHovered: boolean) => css`
-  display: flex;
-  justify-content: space-between;
-  width: 357px;
-  padding: 6px 10px;
-  border-radius: 6px;
-  border: 1px solid
-    ${isFocused
-      ? Colors.primary[100]
-      : isHovered
-      ? Colors.secondary[100]
-      : Colors.light[200]};
-`;
+const InputAreaStyle = ({
+  isFocused,
+  isHovered,
+}: {
+  isFocused: boolean;
+  isHovered: boolean;
+}) =>
+  css({
+    display: "flex",
+    justifyContent: "space-between",
+    width: "357px",
+    padding: "6px 10px",
+    borderRadius: "6px",
+    border: `1px solid ${
+      isFocused
+        ? Colors.primary[100]
+        : isHovered
+        ? Colors.secondary[100]
+        : Colors.light[200]
+    }`,
+  });

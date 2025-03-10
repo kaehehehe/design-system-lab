@@ -11,8 +11,8 @@ export function LabelText({ labelText }: LabelTextProps) {
   return <label css={LabelTextStyle}>{labelText}</label>;
 }
 
-const LabelTextStyle = css`
-  ${Typographies.caption.R}
-  color: ${Colors.basic.black};
-  margin-bottom: 4px;
-`;
+const LabelTextStyle = css({
+  ...Typographies.caption.R,
+  color: Colors.basic.black,
+  marginBottom: "4px",
+});

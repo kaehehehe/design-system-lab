@@ -10,7 +10,7 @@ export function DialogBody({ children }: DialogBodyProps) {
   return <div css={DialogBodyStyle}>{children}</div>;
 }
 
-const DialogBodyStyle = css`
-  display: flex;
-  padding: 16px 24px;
-`;
+const DialogBodyStyle = css({
+  display: "flex",
+  padding: "16px 24px",
+});

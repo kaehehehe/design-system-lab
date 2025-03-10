@@ -10,6 +10,6 @@ export function DialogCloseButton({ onClose }: DialogCloseButtonProps) {
   return <X onClick={onClose} css={DialogCloseButtonStyle} size={20} />;
 }
 
-const DialogCloseButtonStyle = css`
-  cursor: pointer;
-`;
+const DialogCloseButtonStyle = css({
+  cursor: "pointer",
+});

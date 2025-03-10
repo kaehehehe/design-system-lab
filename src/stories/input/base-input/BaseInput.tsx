@@ -74,17 +74,17 @@ BaseInput.ClearIcon = ClearIcon;
 BaseInput.LabelText = LabelText;
 BaseInput.HelperText = HelperText;
 
-const IconStyle = css`
-  svg {
-    width: 16px;
-    height: 16px;
-    color: ${Colors.neutral[200]};
-    cursor: pointer;
-  }
-`;
+const IconStyle = css({
+  svg: {
+    width: "16px",
+    height: "16px",
+    color: Colors.neutral[200],
+    cursor: "pointer",
+  },
+});
 
-const IconWrapperStyle = css`
-  display: flex;
-  align-items: center;
-  gap: 6px;
-`;
+const IconWrapperStyle = css({
+  display: "flex",
+  alignItems: "center",
+  gap: "6px",
+});

@@ -56,107 +56,107 @@ export function SuccessButton(props: ButtonProps) {
 
 //////////////////////////////////////////////////////
 
-const CommonStyle = css`
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  transition: all 300ms ease;
+const CommonStyle = css({
+  display: "flex",
+  alignItems: "center",
+  gap: "4px",
+  transition: "all 300ms ease",
 
-  :disabled {
-    cursor: not-allowed;
-  }
-`;
+  ":disabled": {
+    cursor: "not-allowed",
+  },
+});
 
 const SizeStyle = {
-  small: css`
-    ${Typographies.caption.R}
-    padding: 6px 10px;
-    border-radius: 6px;
-  `,
+  small: css({
+    ...Typographies.caption.R,
+    padding: "6px 10px",
+    borderRadius: "6px",
+  }),
 
-  medium: css`
-    ${Typographies.body.R}
-    padding: 8px 12px;
-    border-radius: 8px;
-  `,
+  medium: css({
+    ...Typographies.body.R,
+    padding: "8px 12px",
+    borderRadius: "8px",
+  }),
 
-  large: css`
-    ${Typographies.body.R}
-    padding: 12px 20px;
-    border-radius: 8px;
-  `,
+  large: css({
+    ...Typographies.body.R,
+    padding: "12px 20px",
+    borderRadius: "8px",
+  }),
 };
 
-const PrimaryButtonStyle = css`
-  background-color: ${Colors.primary[100]};
-  color: ${Colors.basic.white};
+const PrimaryButtonStyle = css({
+  backgroundColor: Colors.primary[100],
+  color: Colors.basic.white,
 
-  :hover {
-    background-color: ${Colors.secondary[100]};
-  }
+  ":hover": {
+    backgroundColor: Colors.secondary[100],
+  },
 
-  :active {
-    background-color: ${Colors.secondary[50]};
-  }
+  ":active": {
+    backgroundColor: Colors.secondary[50],
+  },
 
-  :disabled {
-    background-color: ${Colors.light[200]};
-    color: ${Colors.neutral[200]};
-  }
-`;
+  ":disabled": {
+    backgroundColor: Colors.light[200],
+    color: Colors.neutral[200],
+  },
+});
 
-const SecondaryButtonStyle = css`
-  background-color: ${Colors.basic.white};
-  color: ${Colors.basic.black};
-  border: 1px solid ${Colors.light[200]};
+const SecondaryButtonStyle = css({
+  backgroundColor: Colors.basic.white,
+  color: Colors.basic.black,
+  border: `1px solid ${Colors.light[200]}`,
 
-  :hover {
-    background-color: ${Colors.light[400]};
-  }
+  ":hover": {
+    backgroundColor: Colors.light[400],
+  },
 
-  :active {
-    background-color: ${Colors.light[300]};
-  }
+  ":active": {
+    backgroundColor: Colors.light[300],
+  },
 
-  :disabled {
-    color: ${Colors.light[100]};
-    background-color: ${Colors.light[400]};
-    border-color: ${Colors.light[100]};
-  }
-`;
+  ":disabled": {
+    color: Colors.light[100],
+    backgroundColor: Colors.light[400],
+    borderColor: Colors.light[100],
+  },
+});
 
-const WarningButtonStyle = css`
-  background-color: ${Colors.red[100]};
-  color: ${Colors.basic.white};
+const WarningButtonStyle = css({
+  backgroundColor: Colors.red[100],
+  color: Colors.basic.white,
 
-  :hover {
-    background-color: ${Colors.red[200]};
-  }
+  ":hover": {
+    backgroundColor: Colors.red[200],
+  },
 
-  :active {
-    background-color: ${Colors.red[50]};
-  }
+  ":active": {
+    backgroundColor: Colors.red[50],
+  },
 
-  :disabled {
-    background-color: ${Colors.light[200]};
-    color: ${Colors.neutral[200]};
-  }
-`;
+  ":disabled": {
+    backgroundColor: Colors.light[200],
+    color: Colors.neutral[200],
+  },
+});
 
-const SuccessButtonStyle = css`
-  background-color: ${Colors.green[100]};
-  color: ${Colors.basic.white};
+const SuccessButtonStyle = css({
+  backgroundColor: Colors.green[100],
+  color: Colors.basic.white,
 
-  :hover {
-    background-color: ${Colors.green[200]};
-  }
+  ":hover": {
+    backgroundColor: Colors.green[200],
+  },
 
-  :active {
-    background-color: ${Colors.green[50]};
-  }
+  ":active": {
+    backgroundColor: Colors.green[50],
+  },
 
-  :disabled {
-    background-color: ${Colors.light[200]};
-    color: ${Colors.neutral[200]};
-  }
-`;
+  ":disabled": {
+    backgroundColor: Colors.light[200],
+    color: Colors.neutral[200],
+  },
+});
