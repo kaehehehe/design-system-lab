@@ -1,5 +1,3 @@
-/** @jsxImportSource @emotion/react */
-import { css } from "@emotion/react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { Filter } from "./Filter";
 import { useFilter } from "./useFilter";
