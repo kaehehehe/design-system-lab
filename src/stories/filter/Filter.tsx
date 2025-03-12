@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import { Children, Fragment, ReactElement } from "react";
+import { Children, Fragment, MouseEvent, ReactElement } from "react";
 import { Colors } from "../../constants/colors";
 import { Typographies } from "../../constants/typography";
 import { Check } from "lucide-react";
@@ -33,7 +33,7 @@ export type ChipProps = {
   label: string;
   size?: Size;
   selected: boolean;
-  onClick: () => void;
+  onClick: (event: MouseEvent<HTMLButtonElement>) => void;
   variant: "fill" | "stroke";
   shape: "round" | "square";
 };
