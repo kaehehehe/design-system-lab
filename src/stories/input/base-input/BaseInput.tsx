@@ -44,7 +44,7 @@ export function BaseInput({
 
   return (
     <BaseInput.InputContainer>
-      {labelText && <BaseInput.LabelText labelText={labelText} />}
+      {labelText ? <BaseInput.LabelText labelText={labelText} /> : null}
       <BaseInput.InputArea isFocused={isFocused}>
         <span css={IconStyle}>{prefixIcon && prefixIcon}</span>
 
@@ -62,7 +62,7 @@ export function BaseInput({
           {suffixIcon && suffixIcon}
         </span>
       </BaseInput.InputArea>
-      {helperText && <BaseInput.HelperText helperText={helperText} />}
+      {helperText ? <BaseInput.HelperText helperText={helperText} /> : null}
     </BaseInput.InputContainer>
   );
 }

@@ -1,9 +1,10 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import { ReactNode } from "react";
+import { ReactElement } from "react";
+import { BaseInput } from "../base-input/BaseInput";
 
 type InputContainerProps = {
-  children: ReactNode;
+  children: (ReactElement<typeof BaseInput> | null)[];
 };
 
 export function InputContainer({ children }: InputContainerProps) {
