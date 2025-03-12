@@ -1,10 +1,16 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import { Children, isValidElement, PropsWithChildren, ReactNode } from "react";
+import {
+  Children,
+  isValidElement,
+  PropsWithChildren,
+  ReactElement,
+} from "react";
 import { Typographies } from "../../constants/typography";
 
 export type BreadcrumbProps = {
-  separator: ReactNode;
+  separator: ReactElement;
+  children: ReactElement | ReactElement[];
 };
 
 export function Breadcrumb({
