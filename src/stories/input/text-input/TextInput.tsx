@@ -39,7 +39,7 @@ export function TextInput({
 
   return (
     <InputContainer>
-      {labelText && <LabelText labelText={labelText} />}
+      {labelText ? <LabelText labelText={labelText} /> : null}
       <InputArea isFocused={isFocused}>
         {prefixIcon ? prefixIcon : null}
         <Input
@@ -52,7 +52,7 @@ export function TextInput({
         <ClearIcon setValue={setValue} />
         {suffixIcon ? suffixIcon : null}
       </InputArea>
-      {helperText && <HelperText helperText={helperText} />}
+      {helperText ? <HelperText helperText={helperText} /> : null}
     </InputContainer>
   );
 }
