@@ -1,9 +1,9 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import { ReactNode } from "react";
+import { ReactElement } from "react";
 
 type DialogBodyProps = {
-  children: ReactNode;
+  children: ReactElement;
 };
 
 export function DialogBody({ children }: DialogBodyProps) {

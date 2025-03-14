@@ -12,11 +12,7 @@ import { DialogTitle } from "./DialogTitle";
 export type DialogSizeType = "XS" | "S" | "M" | "L";
 
 type DialogProps = {
-  children: (
-    | ReactElement<typeof DialogHeader>
-    | ReactElement<typeof DialogBody>
-    | ReactElement<typeof DialogFooter>
-  )[];
+  children: ReactElement<typeof Dialog>[];
   open: boolean;
   customStyle?: SerializedStyles;
   size?: DialogSizeType;

@@ -1,10 +1,10 @@
 /** @jsxImportSource @emotion/react */
 import { css, SerializedStyles } from "@emotion/react";
-import { ReactNode } from "react";
+import { ReactElement } from "react";
 import { Colors } from "../../constants/colors";
 
 type DialogHeaderProps = {
-  children: ReactNode;
+  children: ReactElement | ReactElement[];
   customStyle?: SerializedStyles;
 };
 
