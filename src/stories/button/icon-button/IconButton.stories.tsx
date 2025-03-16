@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from "@storybook/react";
-
 import { IconButton } from "./IconButton";
 import { X } from "lucide-react";
 import { Flexbox } from "../../../components/layouts/Flexbox";

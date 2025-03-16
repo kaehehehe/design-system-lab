@@ -2,7 +2,11 @@
 import { css } from "@emotion/react";
 import { Dialog } from "../Dialog";
 import { Flexbox } from "../../../components/layouts/Flexbox";
-import { PrimaryButton, SecondaryButton, WarningButton } from "../../button";
+import {
+  PrimaryButton,
+  SecondaryButton,
+  WarningButton,
+} from "../../button/Button";
 
 type AlertDialogProps = {
   open: boolean;

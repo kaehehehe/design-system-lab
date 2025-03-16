@@ -21,13 +21,13 @@ function Button({
   startIcon,
   endIcon,
   customStyle,
-  ...props
+  ...rest
 }: ButtonProps) {
   return (
     <button
-      disabled={disabled}
-      {...props}
       css={[CommonStyle, SizeStyle[size], customStyle]}
+      disabled={disabled}
+      {...rest}
     >
       {startIcon ? startIcon : null}
       <span>{label}</span>

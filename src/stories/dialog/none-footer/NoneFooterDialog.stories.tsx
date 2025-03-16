@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { NoneFooterDialog } from "./NoneFooterDialog";
 import { useDialog } from "../useDialog";
 import { Flexbox } from "../../../components/layouts/Flexbox";
-import { PrimaryButton } from "../../button";
+import { PrimaryButton } from "../../button/Button";
 
 const meta = {
   title: "Components/dialog/NonFooterDialog",

@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { useDialog } from "../useDialog";
-import { PrimaryButton } from "../../button";
 import { AlertDialog } from "./AlertDialog";
 import { Flexbox } from "../../../components/layouts/Flexbox";
+import { PrimaryButton } from "../../button/Button";
 
 const meta = {
   title: "Components/dialog/AlertDialog",
