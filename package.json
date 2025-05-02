@@ -16,6 +16,8 @@
     "@emotion/babel-preset-css-prop": "^11.11.0",
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
+    "@vanilla-extract/recipes": "^0.5.5",
+    "clsx": "^2.1.1",
     "lucide-react": "^0.477.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
