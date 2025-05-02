@@ -1,12 +1,10 @@
-/** @jsxImportSource @emotion/react */
-import { css } from "@emotion/react";
 import {
   Children,
   isValidElement,
   PropsWithChildren,
   ReactElement,
 } from "react";
-import { Typographies } from "../../constants/typography";
+import * as styles from "./Breadcrumb.css";
 
 export type BreadcrumbProps = {
   separator: ReactElement;
@@ -21,29 +19,13 @@ export function Breadcrumb({
   const childrenLength = childrenArray.length;
 
   return (
-    <ul css={BreadcrumbStyle.container}>
+    <ul className={styles.container}>
       {childrenArray.map((child, i) => (
-        <li key={i} css={BreadcrumbStyle.breadcrumbItem}>
-          <span css={BreadcrumbStyle.text}>{child}</span>
+        <li key={i} className={styles.breadcrumbItem}>
+          <span className={styles.text}>{child}</span>
           {i + 1 !== childrenLength ? <span>{separator}</span> : null}
         </li>
       ))}
     </ul>
   );
 }
-
-const BreadcrumbStyle = {
-  container: css({
-    display: "flex",
-    gap: "8px",
-  }),
-
-  text: css({
-    ...Typographies.caption.SB,
-  }),
-
-  breadcrumbItem: css({
-    display: "flex",
-    gap: "8px",
-  }),
-};
