@@ -1,5 +1,3 @@
-import { css } from "@emotion/react";
-
 export const Typographies = {
   topHeadline: {
     B: {
@@ -50,23 +48,23 @@ export const Typographies = {
     },
   },
   semiTitle: {
-    B: css({
+    B: {
       fontSize: "16px",
       lineHeight: "22px",
       fontWeight: 700,
-    }),
-    SB: css({
+    },
+    SB: {
       fontSize: "16px",
       lineHeight: "22px",
       fontWeight: 600,
-    }),
+    },
   },
   body: {
-    B: css({
+    B: {
       fontSize: "14px",
       lineHeight: "18px",
       fontWeight: 700,
-    }),
+    },
     SB: {
       fontSize: "14px",
       lineHeight: "18px",
