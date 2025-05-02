@@ -1,10 +1,9 @@
-/** @jsxImportSource @emotion/react */
-import { css } from "@emotion/react";
 import { useId } from "react";
 import { Colors } from "../../constants/colors";
 import { InteractiveArea } from "./InteractiveArea";
 import { IconCheckboxOn } from "./IconCheckboxOn";
 import { IconCheckboxOff } from "./IconCheckboxOff";
+import * as styles from "./Checkbox.css";
 
 type CheckboxProps = {
   label: string;
@@ -25,11 +24,11 @@ export function Checkbox({
     <InteractiveArea>
       {(isHovered, isActive) => {
         return (
-          <span css={CheckboxStyle.container}>
+          <span className={styles.container}>
             <input
               type="checkbox"
               id={`checkbox${id}`}
-              css={CheckboxStyle.input}
+              className={styles.input}
               onChange={() => {
                 if (disabled) return;
                 onToggle();
@@ -69,7 +68,7 @@ export function Checkbox({
 
             <label
               htmlFor={`checkbox${id}`}
-              css={CheckboxStyle.label(disabled)}
+              css={styles.labelRecipe({ disabled })}
             >
               {label}
             </label>
@@ -79,23 +78,3 @@ export function Checkbox({
     </InteractiveArea>
   );
 }
-
-const CheckboxStyle = {
-  container: css({
-    display: "flex",
-    margin: "0 auto",
-  }),
-
-  input: css({
-    display: "none",
-  }),
-
-  label: (disabled: boolean) =>
-    css({
-      position: "relative",
-      display: "flex",
-      alignItems: "center",
-      userSelect: "none",
-      cursor: disabled ? "not-allowed" : "pointer",
-    }),
-};
