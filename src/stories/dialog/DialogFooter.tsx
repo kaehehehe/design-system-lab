@@ -1,22 +1,14 @@
-/** @jsxImportSource @emotion/react */
-import { css, SerializedStyles } from "@emotion/react";
+import clsx from "clsx";
 import { ReactElement } from "react";
-import { Colors } from "../../constants/colors";
+import * as styles from "./Dialog.css";
 
 type DialogFooterProps = {
   children: ReactElement | ReactElement[];
-  customStyle?: SerializedStyles;
+  customStyle?: string;
 };
 
 export function DialogFooter({ customStyle, children }: DialogFooterProps) {
-  return <footer css={[DialogFooterStyle, customStyle]}>{children}</footer>;
+  return (
+    <footer className={clsx(styles.footer, customStyle)}>{children}</footer>
+  );
 }
-
-const DialogFooterStyle = css({
-  display: "flex",
-  justifyContent: "space-between",
-  gap: "16px",
-  width: "100%",
-  padding: "16px 24px",
-  borderTop: `1px solid ${Colors.light[200]}`,
-});

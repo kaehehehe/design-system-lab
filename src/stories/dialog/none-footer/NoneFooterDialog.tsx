@@ -1,7 +1,6 @@
-/** @jsxImportSource @emotion/react */
-import { css } from "@emotion/react";
 import { Flexbox } from "../../../components/layouts/Flexbox";
 import { Dialog } from "../Dialog";
+import * as styles from "./NonFooterDialog.css";
 
 type NoneFooterDialogProps = {
   open: boolean;
@@ -23,22 +22,9 @@ export function NoneFooterDialog({
         </Dialog.DialogHeader>
 
         <Dialog.DialogBody>
-          <p css={NoneFooterDialogStyle.content}>
-            Children will be located here
-          </p>
+          <p className={styles.content}>Children will be located here</p>
         </Dialog.DialogBody>
       </Dialog>
     </Flexbox>
   );
 }
-
-const NoneFooterDialogStyle = {
-  container: css({
-    width: "744px",
-  }),
-
-  content: css({
-    height: "72px",
-    padding: "16px 24px",
-  }),
-};

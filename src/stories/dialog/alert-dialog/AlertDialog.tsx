@@ -1,8 +1,7 @@
-/** @jsxImportSource @emotion/react */
-import { css } from "@emotion/react";
 import { Dialog } from "../Dialog";
 import { Flexbox } from "../../../components/layouts/Flexbox";
 import { Button } from "../../button/Button";
+import * as styles from "./AlertDialog.css";
 
 type AlertDialogProps = {
   open: boolean;
@@ -28,11 +27,11 @@ export function AlertDialog({
         </Dialog.DialogHeader>
 
         <Dialog.DialogBody>
-          <p css={ConfirmDialogStyle.content}>Children will be located here</p>
+          <p className={styles.content}>Children will be located here</p>
         </Dialog.DialogBody>
 
-        <Dialog.DialogFooter customStyle={ConfirmDialogStyle.footer}>
-          <Button variant="primary" label="Cancel" onClick={onClose} />
+        <Dialog.DialogFooter customStyle={styles.footer}>
+          <Button variant="secondary" label="Cancel" onClick={onClose} />
           {variant === "confirm" ? (
             <Button variant="primary" label="OK" onClick={onConfirm} />
           ) : (
@@ -43,13 +42,3 @@ export function AlertDialog({
     </Flexbox>
   );
 }
-
-const ConfirmDialogStyle = {
-  content: css({
-    padding: "8px 12px",
-  }),
-
-  footer: css({
-    justifyContent: "flex-end",
-  }),
-};

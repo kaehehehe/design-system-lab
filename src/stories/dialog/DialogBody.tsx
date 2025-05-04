@@ -1,16 +1,10 @@
-/** @jsxImportSource @emotion/react */
-import { css } from "@emotion/react";
 import { ReactElement } from "react";
+import * as styles from "./Dialog.css";
 
 type DialogBodyProps = {
   children: ReactElement;
 };
 
 export function DialogBody({ children }: DialogBodyProps) {
-  return <div css={DialogBodyStyle}>{children}</div>;
+  return <div className={styles.body}>{children}</div>;
 }
-
-const DialogBodyStyle = css({
-  display: "flex",
-  padding: "16px 24px",
-});
