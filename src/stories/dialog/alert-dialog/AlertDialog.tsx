@@ -2,11 +2,7 @@
 import { css } from "@emotion/react";
 import { Dialog } from "../Dialog";
 import { Flexbox } from "../../../components/layouts/Flexbox";
-import {
-  PrimaryButton,
-  SecondaryButton,
-  WarningButton,
-} from "../../button/Button";
+import { Button } from "../../button/Button";
 
 type AlertDialogProps = {
   open: boolean;
@@ -36,11 +32,11 @@ export function AlertDialog({
         </Dialog.DialogBody>
 
         <Dialog.DialogFooter customStyle={ConfirmDialogStyle.footer}>
-          <SecondaryButton label="Cancel" onClick={onClose} />
+          <Button variant="primary" label="Cancel" onClick={onClose} />
           {variant === "confirm" ? (
-            <PrimaryButton label="OK" onClick={onConfirm} />
+            <Button variant="primary" label="OK" onClick={onConfirm} />
           ) : (
-            <WarningButton label="OK" onClick={onConfirm} />
+            <Button variant="warning" label="OK" onClick={onConfirm} />
           )}
         </Dialog.DialogFooter>
       </Dialog>

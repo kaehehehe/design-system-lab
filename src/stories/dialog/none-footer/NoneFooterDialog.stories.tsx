@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { NoneFooterDialog } from "./NoneFooterDialog";
 import { useDialog } from "../useDialog";
 import { Flexbox } from "../../../components/layouts/Flexbox";
-import { PrimaryButton } from "../../button/Button";
+import { Button } from "../../button/Button";
 
 const meta = {
   title: "Components/dialog/NonFooterDialog",
@@ -19,7 +19,7 @@ export const Playground: Story = (args: any) => {
 
   return (
     <Flexbox flexDirection="column" gap={15}>
-      <PrimaryButton label="Click Me" onClick={onOpen} />
+      <Button label="Click Me" onClick={onOpen} />
       <NoneFooterDialog
         title="None Footer Dialog"
         open={open}

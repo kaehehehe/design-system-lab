@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { useDialog } from "../useDialog";
 import { AlertDialog } from "./AlertDialog";
 import { Flexbox } from "../../../components/layouts/Flexbox";
-import { PrimaryButton } from "../../button/Button";
+import { Button } from "../../button/Button";
 
 const meta = {
   title: "Components/dialog/AlertDialog",
@@ -28,7 +28,11 @@ export const Playground: Story = (args: any) => {
 
   return (
     <Flexbox flexDirection="column" gap={15}>
-      <PrimaryButton label="Click Me" onClick={onOpenConfirmDialog} />
+      <Button
+        variant="primary"
+        label="Click Me"
+        onClick={onOpenConfirmDialog}
+      />
       <AlertDialog
         open={openConfirmDialog}
         title="Confirm Dialog"
@@ -37,7 +41,11 @@ export const Playground: Story = (args: any) => {
         variant="confirm"
       />
 
-      <PrimaryButton label="Click Me" onClick={onOpenWarningDialog} />
+      <Button
+        variant="primary"
+        label="Click Me"
+        onClick={onOpenWarningDialog}
+      />
       <AlertDialog
         open={openWarningDialog}
         title="Warning Dialog"
